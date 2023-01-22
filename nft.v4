@@ -6,7 +6,7 @@ add chain ip filter OUTPUT { type filter hook output priority 0; policy drop; }
 add rule ip filter INPUT iifname "lo" counter accept
 add rule ip filter INPUT iifname != "lo" ip daddr 127.0.0.0/8 counter reject
 add rule ip filter INPUT ct state invalid  counter drop
-add rule ip filter INPUT ip protocol 6 tcp dport 21005 counter accept
+add rule ip filter INPUT ip protocol 6 tcp dport 22 counter accept
 add rule ip filter INPUT ip protocol 6 tcp flags & (fin|syn|rst|psh|ack|urg) == 0x0 counter drop
 add rule ip filter INPUT ip protocol 6 tcp flags & (fin|syn|rst|psh|ack|urg) == fin|syn|rst|psh|ack|urg counter drop
 add rule ip filter INPUT ct state related,established  counter accept
