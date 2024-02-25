@@ -1,4 +1,3 @@
-# Translated by iptables-restore-translate v1.8.2 on Fri Jan 20 21:15:46 2023
 add table ip filter
 add chain ip filter INPUT { type filter hook input priority 0; policy drop; }
 add chain ip filter FORWARD { type filter hook forward priority 0; policy drop; }
@@ -13,4 +12,3 @@ add rule ip filter INPUT ct state related,established  counter accept
 add rule ip filter INPUT ip protocol 17 udp sport 53 counter accept
 add rule ip filter FORWARD ct state related,established  counter accept
 add rule ip filter OUTPUT counter accept
-# Completed on Fri Jan 20 21:15:46 2023

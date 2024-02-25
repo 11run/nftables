@@ -1,0 +1,4 @@
+add table ip6 filter
+add chain ip6 filter INPUT { type filter hook input priority 0; policy drop; }
+add chain ip6 filter FORWARD { type filter hook forward priority 0; policy drop; }
+add chain ip6 filter OUTPUT { type filter hook output priority 0; policy drop; }
